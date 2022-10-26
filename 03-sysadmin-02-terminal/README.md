@@ -32,7 +32,7 @@ Connection to localhost closed.
 ptrace_scope on Ubuntu Maverick and up
 reptyr depends on the ptrace system call to attach to the remote program. On Ubuntu Maverick and higher, this ability is disabled by default for security reasons. You can enable it temporarily by doing
 
-# echo 0 > /proc/sys/kernel/yama/ptrace_scope
+echo 0 > /proc/sys/kernel/yama/ptrace_scope
 as root, or permanently by editing the file /etc/sysctl.d/10-ptrace.conf, which also contains more information about exactly what this setting accomplishes.
 
 14. Команда tee читает из стандартного ввода и записывает как в стандартный вывод, так и в один или несколько файлов одновременно. 
