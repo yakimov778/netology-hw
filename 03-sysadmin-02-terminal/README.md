@@ -1,3 +1,6 @@
+# Домашнее задание к занятию "3.2. Работа в терминале, лекция 2"
+
+
 1. $ type cd
 cd is a shell builtin. cd является встроенной командой.
 2. $ grep -c <some_string> <some_file>
