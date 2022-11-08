@@ -37,3 +37,14 @@ Nov 07 20:13:29 vagrant node_exporter[720]: ts=2022-11-07T20:13:29.515Z caller=n
 Nov 07 20:13:29 vagrant node_exporter[720]: ts=2022-11-07T20:13:29.515Z caller=node_exporter.go:199 level=info msg="Listening on" address=:9100
 Nov 07 20:13:29 vagrant node_exporter[720]: ts=2022-11-07T20:13:29.515Z caller=tls_config.go:195 level=info msg="TLS is disabled." http2=false
 ```
+2. Можно использовать все в олном поиске, например: 
+
+` curl http://localhost:9100/metrics | grep -E 'node_cpu|node_disk|node_filesystem|node_network|node_memory'`
+3. 
+![img.png](img.png)
+
+4.
+![img_1.png](img_1.png)
+
+5. `/sbin/sysctl -n fs.nr_open` - покажет максимальное количество дескрипторов, которые может использовать процесс.
+`1048576` кратное 1024.
