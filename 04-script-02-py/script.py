@@ -1,21 +1,25 @@
-import os
-import sys
+import socket
+import time
 
-try:
-    bash_command_arg = sys.argv[1]
-    if os.path.isdir(bash_command_arg):
-        if os.path.exists(f'{bash_command_arg}/.git'):
-            bash_command = [f'cd {bash_command_arg}', "git status", ]
-            result_os = os.popen(' && '.join(bash_command)).read()
-            for result in result_os.split('\n'):
-                if result.find('modified') != -1:
-                    prepare_result = result.replace('\tmodified:   ', '')
-                    print(prepare_result)
-        else:
-            sys.exit("not a git repository")
-    else:
-        sys.exit("Directory is not exists")
-except IndexError as e:
-    print("Directory is not exists")
+service_addr = {
+    'drive.google.com': '0',
+    'mail.google.com': '0',
+    'google.com': '0'
+}
 
 
+for item in service_addr:
+    initial_addr = socket.gethostbyname(item)
+    service_addr[item] = initial_addr
+
+while True:
+
+    for item in service_addr:
+        old_addr = service_addr[item]
+        new_addr = socket.gethostbyname(item)
+        if new_addr != old_addr:
+            service_addr[item] = new_addr
+            print("[ERROR] "+item+" IP mismatch: old IP "+old_addr+", new IP "+new_addr)
+        print(item + " - " + service_addr[item])
+    print("***")
+    time.sleep(5)
