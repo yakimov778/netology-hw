@@ -6,14 +6,13 @@
 
 Создайте собственный обр:
 
-![Screenshot 2023-09-18 at 21.46.57.png](..%2F..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202023-09-18%20at%2021.46.57.png)
+![image.jpeg](image.jpeg)
 
 ## Задача 2
 
 2.1. Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.
 
-![Screenshot 2023-09-19 at 00.15.37.png](..%2F..%2F..%2F..%2F..%2FDesktop%2FScreenshot%202023-09-19%20at%2000.15.37.png)
-
+![virt.jpeg](virt.jpeg)
 
 ## Задача 3
 
