@@ -38,5 +38,5 @@ fecac30c3b74   grafana/grafana:7.4.2              "/run.sh"                3 min
 Изучите доступный интерфейс, найдите в интерфейсе автоматически созданные docker-compose-панели с графиками(dashboards).
 Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 
-![img.png](img.png)
+![metrics.jpeg](..%2F..%2F..%2F..%2F..%2FDesktop%2Fmetrics.jpeg)
 
